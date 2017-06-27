@@ -44,6 +44,7 @@
          return albumArray;
      };
 
+<<<<<<< HEAD
      return Fixtures;
  }
 
@@ -51,3 +52,20 @@
      .module('blocJams')
      .factory('Fixtures', Fixtures);
 })();
+=======
+     Fixtures.getCollection = function(numberOfAlbums) {
+         var albumObjects = [];
+         for (var i = 0; i < numberOfAlbums; i++) {
+             albumObjects.push(albumPicasso);
+         }
+         return albumObjects;
+     };
+
+     return Fixtures;
+}
+
+     angular
+         .module('blocJams')
+         .factory('Fixtures', Fixtures);
+ })();
+>>>>>>> checkpoint-angular-7
