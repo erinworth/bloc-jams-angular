@@ -87,10 +87,17 @@
     }
 
 /**
+* @desc Set song player volume, default: 80
+* @type {Number}
+**/
+      SongPlayer.volume = 80;
+
+
+/**
 * @function play
 * @desc Play current or new song
 * @param {Object} song
-*/
+**/
 
     SongPlayer.play = function(song) {
         song = song || SongPlayer.currentSong;
@@ -166,6 +173,17 @@
           }
       };
 
+/**
+* @function setVolume
+* @desc Set volume based on volume bar
+* @param {Number} volume
+**/
+      SongPlayer.setVolume = function(volume) {
+        if (currentBuzzObject) {
+          currentBuzzObject.setVolume(volume);
+        }
+      };
+  
     return SongPlayer;
 }
 
